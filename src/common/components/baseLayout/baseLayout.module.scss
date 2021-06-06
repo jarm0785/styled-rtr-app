@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  font: 500 100% system-ui, sans-serif;
+}
+
+.pageWrap {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
+  grid-template-rows: min-content min-content 1fr min-content;
+  gap: 1px;
+
+  > * {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    > * {
+      grid-column: 1 / -1 !important;
+      grid-row: auto !important;
+    }
+  }
+}
+
+details p {
+  text-transform: none;
+  text-align: left;
+}
