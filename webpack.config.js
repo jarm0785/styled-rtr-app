@@ -4,7 +4,6 @@ const DotenvWebpack = require('dotenv-webpack');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 
 require('dotenv').config({ path: './.env' });
 
@@ -22,12 +21,21 @@ module.exports = {
     filename: 'app.min.js',
   },
   optimization: {
-    minimizer: [
-      new TerserPlugin({
-        parallel: true,
-      })
-    ]
-
+    splitChunks: { chunks: 'all' },
+    cacheGroups: {
+      modules: {
+        chunks: 'initial',
+        name: 'modules',
+        test: /node_modules/,
+        enforce: true
+      },
+      'modules-async': {
+        chunks: 'async',
+        name: 'modules-async',
+        test: /node_modules/,
+        enforce: true
+      },
+    },
   },
   module: {
     rules: [

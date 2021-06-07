@@ -11,9 +11,7 @@ const common = require('./webpack.config.js');
 module.exports = merge.smartStrategy({
   'module.rules': 'prepend',
   'module.rules.use': 'prepend',
-  externals: 'replace',
   plugins: 'prepend',
-  entry: 'merge',
   optimization: 'replace',
 })(common, {
   output: {
@@ -50,6 +48,14 @@ module.exports = merge.smartStrategy({
             babelrc: false,
             presets: [],
             plugins: [
+              ['babel-plugin-styled-components',
+                {
+                  'displayName': true,
+                  'namespace': 'styled-rtr-app',
+                  'minify': false,
+                  'transpileTemplateLiterals': false
+                }
+              ],
               '@babel/plugin-syntax-dynamic-import',
               'react-refresh/babel'
             ],
