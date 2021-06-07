@@ -2,7 +2,7 @@ import { ICustomTheme } from '../interface/ITheme';
 
 export const darkTheme: ICustomTheme = {
   colors: {
-    primary: '#FFF',
+    primary: '#FFFFFF',
     secondary: '',
     primaryBackground: 'linear-gradient(to right, #000000, #434343)',
     secondaryBackground: '',
@@ -11,17 +11,10 @@ export const darkTheme: ICustomTheme = {
     border: '#1da1f2',
   },
   button: {
-    primary: {
-      color: '#fff',
-      borderColor: '#1da1f2',
-      backgroundColor: '#1da1f2',
-      hoverBackgroundColor: '#1991da'
-    },
-    secondary: {
-      color: '#1da1f2',
-      borderColor: '#1da1f2',
-      backgroundColor: '#15202b',
-      hoverBackgroundColor: '#162e42'
-    }
+    color: '#FFFFFF',
+    borderColor: '#FFFFFF',
+    backgroundColor: 'none',
+    hoverColor: '#FF5722',
+    hoverBackgroundColor: 'rgba(33,150,243 ,.8)'
   },
 };

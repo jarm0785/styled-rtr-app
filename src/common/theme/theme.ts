@@ -10,17 +10,10 @@ export const defaultTheme: ICustomTheme = {
     textSecondary: '#657786',
   },
   button: {
-    primary: {
-      color: '#fff',
-      borderColor: '#1da1f2',
-      backgroundColor: '#1da1f2',
-      hoverBackgroundColor: '#1991da'
-    },
-    secondary: {
-      color: '#1da1f2',
-      borderColor: '#1da1f2',
-      backgroundColor: '#fff',
-      hoverBackgroundColor: '#ebf5fd'
-    }
+    color: '#14171a',
+    borderColor: '#14171a',
+    backgroundColor: 'none',
+    hoverColor: '#FFFFFF',
+    hoverBackgroundColor: 'rgba(33,150,243, 0.3)'
   },
 };

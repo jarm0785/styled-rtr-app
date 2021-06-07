@@ -4,14 +4,12 @@ interface IButtonTheme {
   color: string;
   borderColor: string;
   backgroundColor: string;
+  hoverColor: string;
   hoverBackgroundColor: string;
 }
 
 export interface ICustomTheme extends Theme {
-  button?: {
-    primary: IButtonTheme;
-    secondary: IButtonTheme;
-  }
+  button?: IButtonTheme;
 }
 
 export type ThemeType = 'default' | 'dark';
