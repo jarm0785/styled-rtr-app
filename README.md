@@ -1,27 +1,10 @@
-# React/Typescript/Redux Boilerplate App Template with 
+# React/Typescript/Redux Boilerplate App Template with Styled Components
  
-1. [Instalation steps](#instalation) 
-2. [Technology stack](#technology)
+1. [Technology stack](#technology)
+2. [Instalation steps](#instalation) 
 3. [Usefull Information](#scripts)
 4. [Contributing](#contribution)
 
-<a name="instalation" />
-
-## Instalation steps
-
-1. Clone this repository to your local disk. Rename the directory with your project's name.
-`git clone https://github.com/jarm0785/styled-rtr-app.git`
-
-You can also install using and npx script (Not yet ready. Coming soon)
-`npx create-styled-rtr-app`
-
-1. Install dependencies.
-
-`npm install`
-
-2. Run local environment.
-
-`npm start`
 
 
 <a name="tech stack" />
@@ -77,6 +60,26 @@ You can also install using and npx script (Not yet ready. Coming soon)
 - [React Refresh](https://github.com/facebook/react/issues/16604#issuecomment-528663101)
   This package implements the wiring necessary to integrate Fast Refresh into bundlers. Fast Refresh is a feature that lets you edit React components in a running application without losing their state. It is similar to an old feature known as "hot reloading", but Fast Refresh is more reliable and officially supported by React.
 
+- [Loadable Components](https://loadable-components.com/)
+  Loadable components are used for code splitting. This package was chosen as it supports server side rendering.
+
+<a name="instalation" />
+
+## Instalation steps
+
+1. Fork this repository and clone it to your local machine. Assing your project's name to the forked repository.
+
+You can also install using and npx script (Not yet ready. Coming soon)
+`npx create-styled-rtr-app`
+
+2. Install dependencies.
+
+`npm install`
+
+3. Run local environment.
+
+`npm start`
+
 <a name="information" />
 
 ## Other usefull information
@@ -103,7 +106,7 @@ You can also install using and npx script (Not yet ready. Coming soon)
 
 ## Contributing
 
-Feel free to adding new features you think would be usefull for other users to have. Also feel free to report any bugs or open a pull request with fixes.
+Feel free to add new features  that you think would be usefull for other users to have. Also feel free to report any bugs or open a pull request with fixes.
 
 
 ### Submitting code
