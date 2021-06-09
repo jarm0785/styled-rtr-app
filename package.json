@@ -14,7 +14,8 @@
     "test:watch": "jest --config=jest.config.js --watch",
     "test:coverage": "jest --config=jest.config.js --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -86,7 +87,7 @@
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^6.2.10",
     "html-webpack-plugin": "^5.3.1",
-    "husky": "^4.3.0",
+    "husky": "^6.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.4",
     "jest-styled-components": "^7.0.4",
