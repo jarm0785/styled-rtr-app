@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import { ThemeProvider } from 'styled-components';
-import useTheme from '../../hooks/useTheme';
+import useCustomTheme from '../../hooks/useCustomTheme';
 import WidgetRouter from '../widgetRouter/WidgetRouter';
 
 const App: FunctionComponent = () => {
-  const { theme, activeTheme } = useTheme();
+  const { theme, activeTheme } = useCustomTheme();
 
   return (
     <ThemeProvider theme={ theme[activeTheme] }>

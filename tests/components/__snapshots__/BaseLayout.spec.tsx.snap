@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base Layout display and theme toggle should render base layout component properly 1`] = `
+.c0 {
+  grid-column: 1 / -1;
+  background: linear-gradient(to right,#E3F2FD,#FFF);
+}
+
+.c2 {
+  grid-column: 2 / 3;
+  background: linear-gradient(to right,#E3F2FD,#FFF);
+}
+
+.c3 {
+  grid-column: 2 / 3;
+  background: linear-gradient(to right,#E3F2FD,#FFF);
+}
+
+.c4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  background: linear-gradient(to right,#E3F2FD,#FFF);
+}
+
+.c5 {
+  grid-column: 1 / -1;
+  background: linear-gradient(to right,#E3F2FD,#FFF);
+}
+
+.c1 {
+  font-size: 1.5rem;
+  color: #14171a;
+  margin: '1rem 0';
+}
+
+<div
+  className="pageWrap"
+>
+  <header
+    className="c0"
+    data-testid="base_layout:header"
+  >
+    <h1
+      className="c1"
+    >
+      Header
+    </h1>
+  </header>
+  <nav
+    className="c2"
+    data-testid="base_layout:navbar"
+  >
+    <h1
+      className="c1"
+    >
+      Navbar Items
+    </h1>
+  </nav>
+  <main
+    className="c3"
+    data-testid="base_layout:main"
+  >
+    <h1
+      className="c1"
+    >
+      Main
+    </h1>
+  </main>
+  <aside
+    className="c4"
+    data-testid="base_layout:sidebar"
+  >
+    <h1
+      className="c1"
+    >
+      Side Panel
+    </h1>
+  </aside>
+  <aside
+    className="c5"
+    data-testid="base_layout:footer"
+  >
+    <h1
+      className="c1"
+    >
+      Footer
+    </h1>
+  </aside>
+</div>
+`;

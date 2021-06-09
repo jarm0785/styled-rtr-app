@@ -40,8 +40,8 @@ const SwitchToggleIndicator = styled.div<Partial<ISwitchProps>>`
 const Switch: FC<ISwitchProps> = ({ active, toggleSwitch }) => {
 
   return (
-    <SwitchToggle active={active} onClick={ toggleSwitch }>
-      <SwitchToggleIndicator active={active} />
+    <SwitchToggle data-testid="switch:toggle_wrapper" active={ active } onClick={ toggleSwitch }>
+      <SwitchToggleIndicator data-testid="switch:toggle_indicator" active={ active } />
     </SwitchToggle>
   );
 };

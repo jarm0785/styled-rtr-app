@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { store } from '../../src/common/store/store';
+import store from '../../src/common/store/store';
 
 const StoreProvider: FC = ({ children }) => {
   return (
