@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const merge = require('webpack-merge');
 const path = require('path');
-const LicensePlugin = require('webpack-license-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 process.env.NODE_ENV = 'production';
@@ -68,7 +67,5 @@ module.exports = merge.smartStrategy({
       }
     ]
   },
-  plugins: [
-    new LicensePlugin(),
-  ]
+  plugins: []
 });

@@ -21,19 +21,25 @@ module.exports = {
     filename: 'app.min.js',
   },
   optimization: {
-    splitChunks: { chunks: 'all' },
-    cacheGroups: {
-      modules: {
-        chunks: 'initial',
-        name: 'modules',
-        test: /node_modules/,
-        enforce: true
-      },
-      'modules-async': {
-        chunks: 'async',
-        name: 'modules-async',
-        test: /node_modules/,
-        enforce: true
+    splitChunks: {
+      chunks: 'async',
+      minSize: 20000,
+      minRemainingSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
       },
     },
   },
@@ -97,8 +103,8 @@ module.exports = {
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: isDevelopment ? '[name].css' : '[name].[hash].css',
-      chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
+      filename: isDevelopment ? '[name].css' : '[name].[chunkhash].css',
+      chunkFilename: isDevelopment ? '[id].css' : '[id].[chunkhash].css',
     }),
   ],
 };
