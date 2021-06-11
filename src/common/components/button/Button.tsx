@@ -21,4 +21,7 @@ export const Button = styled.button`
 
 export const SimpleButton = styled(Button)`
   border: none;
+  &:hover {
+    background-color: 'unset';
+  }
 `;
