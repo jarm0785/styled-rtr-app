@@ -19,6 +19,7 @@ module.exports = merge.smartStrategy({
         parallel: true,
       })
     ],
+    usedExports: true,
     runtimeChunk: {
       name: 'manifest',
     }
@@ -40,6 +41,7 @@ module.exports = merge.smartStrategy({
             plugins: [
               ['babel-plugin-styled-components',
                 {
+                  'namespace': 'rtr-app',
                   'displayName': false,
                   'minify': true,
                   'pure': true
