@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const webpack = require('webpack');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const merge = require('webpack-merge');
@@ -79,7 +78,6 @@ module.exports = merge.smartStrategy({
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
       async: false,
