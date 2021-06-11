@@ -19,7 +19,9 @@ module.exports = merge.smartStrategy({
         parallel: true,
       })
     ],
-    usedExports: true,
+    runtimeChunk: {
+      name: 'manifest',
+    }
   },
   module: {
     rules: [
@@ -32,8 +34,8 @@ module.exports = merge.smartStrategy({
           loader: 'babel-loader',
           options: {
             presets: [
-              '@babel/preset-react',
-              '@babel/preset-env',
+              ['@babel/preset-env', { 'modules': false }],
+              '@babel/preset-react'
             ],
             plugins: [
               ['babel-plugin-styled-components',
@@ -43,7 +45,7 @@ module.exports = merge.smartStrategy({
                   'pure': true
                 }
               ],
-              '@babel/plugin-syntax-dynamic-import'
+              '@babel/plugin-syntax-dynamic-import',
             ]
           }
         }

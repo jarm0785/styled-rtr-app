@@ -18,27 +18,33 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, './dist'),
-    filename: 'app.min.js',
+    filename: '[name].[fullhash].js',
+    chunkFilename: '[id].[chunkhash].js',
+    libraryTarget: 'umd',
   },
   optimization: {
     splitChunks: {
-      chunks: 'async',
-      minSize: 20000,
-      minRemainingSize: 0,
-      minChunks: 1,
-      maxAsyncRequests: 30,
-      maxInitialRequests: 30,
-      enforceSizeThreshold: 50000,
+      chunks: 'all',
+      minSize: 1000 * 600,
       cacheGroups: {
         defaultVendors: {
+          chunks: 'initial',
           test: /[\\/]node_modules[\\/]/,
           priority: -10,
           reuseExistingChunk: true,
+          enforce: true,
         },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
+        'modules-async': {
+          chunks: 'async',
+          name: 'modules-async',
+          test: /node_modules/,
+          enforce: true
+        },
+        common: {
+          chunks: 'async',
+          name: 'common',
+          test: /[\\/]src[\\/]common[\\/]/,
+          enforce: true
         },
       },
     },
@@ -103,8 +109,8 @@ module.exports = {
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: isDevelopment ? '[name].css' : '[name].[chunkhash].css',
-      chunkFilename: isDevelopment ? '[id].css' : '[id].[chunkhash].css',
+      filename: '[name].[fullhash].css',
+      chunkFilename: '[id].[chunkhash].css',
     }),
   ],
 };
