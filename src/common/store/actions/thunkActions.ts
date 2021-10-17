@@ -8,7 +8,6 @@ const thunkActions = {
   getSampleData: createAsyncThunk(
     'sampleApi/getSampleData',
     async () => {
-      debugger;
       const response = await sampleApi.getSampleData();
 
       return (await response.data) as ISampleResponse;
